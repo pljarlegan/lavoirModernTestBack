@@ -1,0 +1,50 @@
+[
+  {
+    "id": "8pce",
+    "name": "Lot de 8 pce",
+    "quantity": "8",
+    "referenceUnit": "pce"
+  },
+  {
+    "id": "6pce",
+    "name": "Lot de 6 pce",
+    "quantity": "6",
+    "referenceUnit": "pce"
+  },
+  {
+    "id": "84ce",
+    "name": "Lot de 4 pce",
+    "quantity": "4",
+    "referenceUnit": "pce"
+  },
+  {
+    "id": "3pce",
+    "name": "Lot de 3 pce",
+    "quantity": "3",
+    "referenceUnit": "pce"
+  },
+  {
+    "id": "pce",
+    "name": "pce",
+    "quantity": "3",
+    "referenceUnit": "kg"
+  },
+  {
+    "id": "kg",
+    "name": "kg",
+    "quantity": "1000",
+    "referenceUnit": "g"
+  },
+  {
+    "id": "g",
+    "name": "g",
+    "quantity": null,
+    "referenceUnit": null
+  },
+  {
+    "id": "cs",
+    "name": "cs (cuillère à soupe)",
+    "quantity": "20",
+    "referenceUnit": "g"
+  }
+]

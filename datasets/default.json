@@ -1,0 +1,23 @@
+[
+  {
+    "name": "the name",
+    "value": "the value"
+  },
+  {
+    "name": "the second name",
+    "value": "the second value"
+  },
+  {
+    "name": "the name",
+    "value": "the value"
+  },
+  {
+    "name": "name of no value"
+  },
+  {
+    "value": "value of no name"
+  },
+  {
+    "invalid_key": "should not be saved"
+  }
+]
