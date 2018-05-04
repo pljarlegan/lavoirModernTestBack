@@ -38,3 +38,12 @@ $ curl -H "Content-Type: application/json" -X POST -d '{ "list":  [1, 2, 3] }' l
 $ curl -H "Content-Type: application/json" -X POST -d '{ "list":  [1, 2, 3] }' localhost:3000/test1
 {"for":{"result":6},"foreach":{"result":6},"while":{"result":6},"recursion":{"result":6}}
 ```
+
+### Test 2
+Write a webservice that combines two lists by alternatingly taking elements in list1, then in list2. For exemple: given two lists `[a, b, c]` and `[1, 2, 3]`, the results sould be `[A, 1, B, 2, C, 3]`.
+
+Here a call example and result:
+```
+$ curl -H "Content-Type: application/json" -X POST -d '{ "list1": ["a", "b", "c"], "list2": [1, 2, 3] }' localhost:3000/test2
+["a",1,"b",2,"c",3]
+```
