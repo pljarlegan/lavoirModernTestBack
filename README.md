@@ -7,3 +7,34 @@ TODO
 
 By following the project tree file (like all the default component), Do each exercise.
 Don't forget, you're on git, so don't forget to commit.
+
+### Test 1
+Write a webservice that compute the sum of the numbers in a given list using a for-loop, foreach-loop, a while-loop,
+and recursion.
+
+You should made 5 routes:
+* /test1/for : the for sum, response,
+* /test1/foreach : the foreach sum,
+* /test1/while : the while sum,
+* /test1/recursion : the recursion sum,
+* /test1  : the 4 sums.
+
+The 4 first routes should return the same result :
+```
+{ result: 0 }
+```
+the last route result should be : 
+```
+{"for":{"result":0},"foreach":{"result":0},"while":{"result":0},"recursion":{"result":0}}
+```
+(where 0 should be replaced by the sum).
+
+Here some calls examples and results to these routes:
+```
+$ curl -H "Content-Type: application/json" -X POST -d '{ "list":  [1, 2, 3] }' localhost:3000/test1/recursion
+{"result":6}
+```
+```
+$ curl -H "Content-Type: application/json" -X POST -d '{ "list":  [1, 2, 3] }' localhost:3000/test1
+{"for":{"result":6},"foreach":{"result":6},"while":{"result":6},"recursion":{"result":6}}
+```
