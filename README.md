@@ -4,9 +4,9 @@
 TODO
 
 ## Test
-
-By following the project tree file (like all the default component), Do each exercise.
-Don't forget, you're on git, so don't forget to commit.
+By following the project tree file (like all the default component), Do each exercise.  
+Create your own git repository, don't commit on this repository.  
+Don't forget, you're on git, so don't forget to commit : 1 commit by exercise is the minimum, not the maximum ;).
 
 ### Test 1
 Write a webservice that compute the sum of the numbers in a given list using a for-loop, foreach-loop, a while-loop,
