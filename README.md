@@ -47,3 +47,30 @@ Here a call example and result:
 $ curl -H "Content-Type: application/json" -X POST -d '{ "list1": ["a", "b", "c"], "list2": [1, 2, 3] }' localhost:3000/test2
 ["a",1,"b",2,"c",3]
 ```
+
+### Test 3
+Let's A be a matrix
+```
+A = [ 6  3  2  1 ]  Allowed moves : → or ↓
+    [ 5  5  4  1 ]
+    [ 1  2  2  3 ]
+```
+
+You can move RIGTH or DOWN.
+You cannot move UP or LEFT. 
+In this example, the highest path is : 
+```
+[*6  3  2  1 ]
+[*5 *5 *4  1 ]
+[ 1  2 *2 *3 ] 
+
+=> 6 + 5 + 5 + 4 + 2 + 3 = 25
+```
+
+Write a webservice that calculate the highest path sum in a matrix
+following this rule (move only RIGTH or DOWN)
+Here a call example and result:
+```
+$ curl -H "Content-Type: application/json" -X POST -d '{"matrix":[[6,3,2,1],[5,5,4,1],[1,2,2,3]]}' localhost:3000/test3
+25
+```
