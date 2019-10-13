@@ -7,5 +7,6 @@ router.get("/", (req, res) => {
 });
 
 router.use("/default", route("default"));
+router.use("/test", route("test"));
 
 module.exports = router;
