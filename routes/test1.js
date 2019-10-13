@@ -1,6 +1,5 @@
 const express = require("express");
-const router = express.Router(),
-  DefaultHelper = helper("Default");
+const router = express.Router();
 
 router.get("/", (req, res) => {
   "use strict";
@@ -9,7 +8,11 @@ router.get("/", (req, res) => {
 
 router.post("/for", (req, res) => {
   "use strict";
-  res.json({ result: res });
+  let result = 0;
+  for (let i = 0; i < req.body.list.length ; i++) {
+    result += req.body.list[i];
+  }
+  res.json({ result });
 });
 
 router.post("/foreach", (req, res) => {
