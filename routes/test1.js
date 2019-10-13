@@ -24,7 +24,15 @@ router.post("/foreach", (req, res) => {
 
 router.post("/while", (req, res) => {
   "use strict";
-  res.json({ result: 0 });
+  let result = 0;
+  const list = req.body.list;
+
+  while (list.length > 0) {
+    result += list.pop();
+    if (list.length === 0) {
+      res.json({ result });
+    }
+  }
 });
 
 router.post("/recursion", (req, res) => {
