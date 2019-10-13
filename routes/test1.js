@@ -17,7 +17,9 @@ router.post("/for", (req, res) => {
 
 router.post("/foreach", (req, res) => {
   "use strict";
-  res.json({ result: 0 });
+  let result = 0;
+  req.body.list.forEach((item) => result += item);
+  res.json({ result });
 });
 
 router.post("/while", (req, res) => {
