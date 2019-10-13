@@ -9,14 +9,13 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   "use strict";
   const list1 = req.body.list1,
-    list2 = req.body.list2;
-
-  const result = list1.map((elem, index) => {
-    return [elem, list2[index]]
-  })
-    .reduce((acc, item) => {
-      return acc.concat(item);
-    }, []);
+    list2 = req.body.list2,
+    result = list1.map((elem, index) => {
+      return [ elem, list2[ index ] ];
+    })
+      .reduce((acc, item) => {
+        return acc.concat(item);
+      }, []);
 
   res.json(result);
 });
