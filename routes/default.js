@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router(),
-
   DefaultHelper = helper("Default");
 
 router.get("/", (req, res) => {
