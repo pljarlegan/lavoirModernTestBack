@@ -9,5 +9,6 @@ router.get("/", (req, res) => {
 router.use("/default", route("default"));
 router.use("/test1", route("test1"));
 router.use("/test2", route("test2"));
+router.use("/test3", route("test3"));
 
 module.exports = router;
