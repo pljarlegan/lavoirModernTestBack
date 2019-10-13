@@ -37,7 +37,15 @@ router.post("/while", (req, res) => {
 
 router.post("/recursion", (req, res) => {
   "use strict";
-  res.json({ result: 0 });
+  const list = req.body.list,
+    calc = (items, result) => {
+      result += items.pop();
+      if (items.length > 0) {
+        return calc(items, result);
+      }
+      return result;
+    };
+  res.json({ result: calc(list, 0) });
 });
 
 module.exports = router;
