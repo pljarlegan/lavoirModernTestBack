@@ -3,7 +3,7 @@ const router = express.Router(),
   calcFor = (list) => {
     let result = 0;
     for (let i = 0; i < list.length ; i++) {
-      result += list[i];
+      result += list[ i ];
     }
     return result;
   },
@@ -35,6 +35,17 @@ const router = express.Router(),
 router.get("/", (req, res) => {
   "use strict";
   res.send("test routes GET");
+});
+
+router.post("/", (req, res) => {
+  "use strict";
+  res.json({
+    for: { result: calcFor(Object.assign([], req.body.list)) },
+    foreach: { result: calcForEach(Object.assign([], req.body.list)) },
+    while: { result: calcWhile(Object.assign([], req.body.list)) },
+    recursion: { result: calcRecursion(Object.assign([], req.body.list)),
+    }
+  });
 });
 
 router.post("/for", (req, res) => {
